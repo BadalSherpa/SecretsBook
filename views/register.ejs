@@ -1,42 +1,20 @@
 <%- include('partials/header') %>
-<div class="container mt-5">
-  <h1>Register</h1>
+<title>Altermate Signup</title>
 
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body">
 
-          <!-- Makes POST request to /register route -->
-          <form action="/register" method="POST">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-dark">Register</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <a class="btn btn-block btn-social btn-google" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign Up with Google
-          </a>
-        </div>
-    
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<form action="/register" class="form-signin" method="POST">
+<i class="fas fa-key fa-6x"></i>
+<h1 class="h3 mb-3 font-weight-normal">Create Your Account</h1>
+<input type="text" name="fullName" class="form-control top" placeholder="Full Name" required autofocus>
+<input type="email" name="username"class="form-control middle" placeholder="Email address" required>
+<input type="password" name="password" class="form-control bottom" placeholder="Password" required>
+<p class="mt-5 mb-3 text-muted">Already have an account? <a href="/login"  style="text-decoration:none">Sign in</a></p>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+<p style="text-align:center">OR</p>
+<a href="/auth/google" role="button"  style="text-decoration:none">
+<i class="fab fa-google"></i>
+  Sign up with Google
+</a>
+<p class="mt-5 mb-3 text-muted">&copy; 2020 BadalSherpa </p>
+</form>
 <%- include('partials/header') %>
